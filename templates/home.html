@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block body %}
+    <form action="/textutils" method="get" style="margin-left: 500px; margin-top: 20px; margin-bottom: 20px; margin-right: 500px;">
+    <div class="form-group purple-border">
+  <label for="exampleFormControlTextarea4">Colorful border</label>
+  <textarea class="form-control" id="exampleFormControlTextarea4" name="text1" rows="3" placeholder="Enter your text here"></textarea>
+</div>
+        <hr>
+        <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="removepunc" name="removepunc">
+  <label class="custom-control-label" for="removepunc">Remove Punctuation</label>
+</div>
+        <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="fullcaps" name="fullcaps">
+  <label class="custom-control-label" for="fullcaps">Capitalize</label>
+</div>
+        <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="newlineremover" name="newlineremover" disabled>
+  <label class="custom-control-label" for="newlineremover">New Line Remover</label>
+</div>
+        <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="extraspaceremover" name="extraspaceremover" disabled>
+  <label class="custom-control-label" for="extraspaceremover">Extra Space Remover</label>
+</div>
+        <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="numberremover" name="numberremover">
+  <label class="custom-control-label" for="numberremover">Numbers Remover</label>
+</div>
+        <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="counter" name="counter">
+  <label class="custom-control-label" for="counter">NumCount</label>
+</div>
+        <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="totitle" name="totitle">
+  <label class="custom-control-label" for="totitle">Titlize</label>
+</div>
+        <hr>
+        <div class="form-group">
+    <label for="custom"></label>
+    <input class="form-control" id="custom" name="custom" placeholder="Custom Remove? ( Case Sensitive )">
+  </div>
+         <hr>
+        <div class="form-group">
+    <label for="custom">Find and Replace? ( Case Sensitive )</label>
+    <input style="margin-bottom: 10px;" class="form-control" id="custom" name="find" placeholder="Find">
+  </div>
+        <div class="form-group">
+    <label for="custom"></label>
+    <input  class="form-control" id="custom" name="replace" placeholder="Replace">
+  </div>
+    <button type="submit" class="btn btn-info">Analyze</button>
+    </form>
+{% endblock body%}
